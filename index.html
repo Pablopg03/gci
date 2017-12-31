@@ -1,0 +1,157 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="assets/css/index.css" rel="stylesheet">
+<title>PyRoma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="full page">
+<div class="bash" >
+<span id="loader"></span>
+<div id="dv1" style="width:40%; top:35%; left:30%; border-radius:12px;   transition: all 0.6s ease; z-index:349856; height:25%;background:#9b9b9b;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);display:none;">
+ <h1 style="position:relative; left:30%; font-family: 'Ubuntu', sans-serif; font-size:40px;">Join</h1> <div class="menu-icon" id="openNav" onclick="intro"><i align="center" class="menu-r"></i></div>
+
+</div>
+
+
+</div>
+</div>
+<div class="full nav">
+			<nav id="bt-menu" class="bt-menu">
+				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul id="fp-nav" style="margin-top:15px;" >
+					<li ><a href="#" >Introduction</a></li>
+					<li><a href="#">Meetings</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Twitter</a></li>
+				</ul>
+			</nav>
+
+<div id="fullpage" class="fl" style="width:102%;">
+
+	<div id="staticImg">
+		<div class="imgsContainer">
+			<img src="assets/images/pyroma_logo.png" alt="logo" id="logo" />
+		</div>
+	</div>
+
+	<div class="section " id="section0">
+		<h1 style="font-family:'roboto', sans-serif; font-size:200px; color:#94062c;">Py<color style="color:#fea200;">Roma</color></h1>
+	</div>
+	<div class="section" id="section1">
+		<div class="wrap">
+
+			<div class="imgsContainer">
+				<img src="assets/images/meeting1.jpg"  />
+				<img src="assets/images/meeting2.jpg" style="margin-top:220px;" />
+				<img src="assets/images/meeting3.jpg" style="margin-left:380px;" />
+				<img src="assets/images/meeting4.jpg" style="margin-left:380px;margin-top:220px;" />
+				<img src="assets/images/meeting5.jpg" style="margin-left:560px;margin-top:220px;" />
+			</div>
+			<div class="box">
+				<h2 style=" font-family: 'Ubuntu', sans-serif; font-size:100px; transform:rotate(90deg); position:relative; left:60%;" >Our </br></br></br>Meetings</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="section moveDown" id="section2">
+		<div class="wrap">
+
+			<div class="box">
+				<h2 style=" font-family: 'Ubuntu', sans-serif; font-size:30px;">About us</h2>
+				<p style=" font-family: 'Ubuntu', sans-serif; font-size:20px;">We are a group of user in Rome dedicated to language PYTHON</p>
+			</div>
+		</div>
+	</div>
+	<div class="section moveDown" id="section3">
+		<div class="wrap">
+			<div class="box">
+				<h2 style="font-family: 'Roboto', sans-serif; color:#ffffff;"  >Follow on twitter</h2>
+			</div>
+			<div style="position:relative; left:300px; top:120px; z-index:19736;" >
+			<blockquote style="position:relative; left:300px;" class="twitter-tweet" data-lang="es"><p lang="it" dir="ltr">Save the date for <a href="https://twitter.com/hashtag/PyRoma?src=hash&amp;ref_src=twsrc%5Etfw">#PyRoma</a>!<br>14 Novembre dalle 19:00 alle 22:30 presso <a href="https://twitter.com/EnLabs?ref_src=twsrc%5Etfw">@EnLabs</a><br>Registrazione: <a href="https://t.co/lot8k5f5vr">https://t.co/lot8k5f5vr</a><a href="https://twitter.com/hashtag/python?src=hash&amp;ref_src=twsrc%5Etfw">#python</a> <a href="https://twitter.com/hashtag/aperitech?src=hash&amp;ref_src=twsrc%5Etfw">#aperitech</a></p>&mdash; pyroma (@pyroma) <a href="https://twitter.com/pyroma/status/922770960855523328?ref_src=twsrc%5Etfw">24 de octubre de 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+		</div>
+	</div>
+</div>
+
+
+				
+</div>
+
+</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				'css3': true,
+				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
+				'navigation': true,
+				'navigationPosition': 'right',
+				'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+
+
+
+				'onLeave': function(index, nextIndex, direction){
+					if (index == 3 && direction == 'down'){
+						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+					}
+					else if(index == 3 && direction == 'up'){
+						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+					}
+
+					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+					$('#staticImg').toggleClass('moveDown', nextIndex == 4);
+					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+				}
+			});
+		});
+
+	</script>
+
+<script>
+$("#openNav").click(function() {
+  $(".page").addClass("swipe-lft");
+  $(".nav").addClass("open");
+});
+
+$("#closeNav").click(function() {
+  $(".page").removeClass("swipe-lft");
+  $(".nav").removeClass("open");
+});
+</script>
+<script>
+setTimeout(function(){ document.getElementById('dv1').style.position = 'fixed'; }, 8000);
+
+setTimeout(function(){ document.getElementById('dv1').style.display = 'block'; }, 9900);
+
+</script>
+<script>
+  var typed6 = new Typed('#loader', {
+    strings: ['<color style="color:#ffffff;" >-></color>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;^1000\n<br/>`<color style="color:#ffffff;" >></color>10%`^1000\n<br/>`<color style="color:#ffffff;" >></color>20%`^1000\n<br/>`<color style="color:#ffffff;" >></color>30%`^1000\n<br/>`<color style="color:#ffffff;" >></color>40%`^1000\n<br/>`<color style="color:#ffffff;" >></color>50%`^500\n<br/>`<color style="color:#ffffff;" >></color>60%`^1000\n<br/>`<color style="color:#ffffff;" >></color>70%`<br/>`<color style="color:#ffffff;" >></color>80%`<br/>`<color style="color:#ffffff;" >></color>90%`<br/>`<color style="color:#ffffff;" >></color>100%`^1000\n<br/>`<color style="color:#ffffff;" >></color>`'],
+    typeSpeed: 10,
+    backSpeed: 10,
+	    cursorChar: '_',
+		loop: false
+  });
+    
+</script>
+<script>
+$(document).ready(function(){
+	$("#menu").change(function(){
+	  window.location.href = $(this).find("option:selected").attr("id") + '.html';
+	});
+});
+</script>
+<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="assets/js/classie.js"></script>
+<script src="assets/js/Menu.js"></script>
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/fullpage.js"></script>
+</html>

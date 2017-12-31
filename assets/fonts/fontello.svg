@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="pyroma" unicode="&#xe800;" d="M499 850c-255 0-239-111-239-111l0-114 244 0 0-35-341 0c0 0-163 19-163-239 0-257 143-248 143-248l85 0 0 119c0 0-5 143 140 143 145 0 241 0 241 0 0 0 136-2 136 131 0 133 0 221 0 221 0 0 21 133-246 133z m-134-77c24 0 44-20 44-44 0-24-20-44-44-44-24 0-44 20-44 44 0 24 20 44 44 44z m141-923c255 0 240 111 240 111l-1 114-243 0 0 35 340 0c0 0 163-19 163 239 0 257-142 248-142 248l-85 0 0-119c0 0 4-143-141-143-144 0-241 0-241 0 0 0-136 2-136-131 0-133 0-221 0-221 0 0-20-133 246-133z m135 77c-25 0-44 20-44 44 0 24 19 44 44 44 24 0 43-20 43-44 0-24-19-44-43-44z" horiz-adv-x="1005" />
+</font>
+</defs>
+</svg>
